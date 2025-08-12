@@ -6,10 +6,21 @@ public class Level : MonoBehaviour
 {
     public int id;
 
+    public bool isTouchStartPoint;
+
+    //[SerializeField] private float size = 5f;
+    [SerializeField] private Canvas cv;
+    [SerializeField] private List<Match> matches;
 
     private void Start()
     {
-        
+        Camera cam = Camera.main;
+
+        cv.renderMode = RenderMode.ScreenSpaceCamera;
+        cv.worldCamera = cam;
+        //cam.orthographicSize = size;
+
+        LineManager.Instance.SetMatches(matches);
     }
 
     private void Update()
@@ -30,7 +41,7 @@ public class Level : MonoBehaviour
 
     private void SetCurMap()
     {
-        PlayerPrefs.SetInt("CurrentMap", LevelManager.Ins.curMapID);
+        PlayerPrefs.SetInt("CurrentMap", LevelManager.Ins.curMap);
         PlayerPrefs.Save();
     }
 

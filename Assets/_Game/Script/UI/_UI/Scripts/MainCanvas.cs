@@ -17,7 +17,7 @@ public class MainCanvas : UICanvas
     {
         pauseBtn.onClick.AddListener(() =>
         {
-            //AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
+            AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
             UIManager.Ins.OpenUI<PauseCanvas>();
             UIManager.Ins.CloseUI<MainCanvas>();
         });

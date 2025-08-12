@@ -14,4 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapList:
   - levelID: 0
-    isWon: 0
+    isWon: 1
+  - levelID: 1
+    isWon: 1
+  - levelID: 2
+    isWon: 1
+  - levelID: 3
+    isWon: 1
+  - levelID: 4
+    isWon: 1
+  - levelID: 5
+    isWon: 1
+  - levelID: 6
+    isWon: 1
+  - levelID: 7
+    isWon: 1

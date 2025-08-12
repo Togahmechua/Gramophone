@@ -17,14 +17,14 @@ public class WinCanvas : UICanvas
 
     private void OnEnable()
     {
-        //AudioManager.Ins.PlaySFX(AudioManager.Ins.win2);
+        AudioManager.Ins.PlaySFX(AudioManager.Ins.win);
     }
 
     private void Start()
     {
         nextBtn.onClick.AddListener(() =>
         {
-            //AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
+            AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
             LevelManager.Ins.curMapID++;
 
             if (LevelManager.Ins.curMapID < LevelManager.Ins.mapSO.mapList.Count)
@@ -47,7 +47,7 @@ public class WinCanvas : UICanvas
 
         menuBtn.onClick.AddListener(() =>
         {
-            //AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
+            AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
 
             UIManager.Ins.TransitionUI<ChangeUICanvas, WinCanvas>(0.6f,
                 () =>

@@ -20,8 +20,8 @@ public class LevelManager : Singleton<LevelManager>
 
     private void Start()
     {
-       /* curMap = PlayerPrefs.GetInt("CurrentMap", 0);
-        mapSO.LoadWinStates();*/
+        curMap = PlayerPrefs.GetInt("CurrentMap", 0);
+        mapSO.LoadWinStates();
     }
 
     public void LoadMapByID(int id)

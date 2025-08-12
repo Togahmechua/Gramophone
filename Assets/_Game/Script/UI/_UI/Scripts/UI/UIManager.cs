@@ -23,6 +23,7 @@ public class UIManager : Singleton<UIManager>
     public Transform CanvasParentTF;
     [HideInInspector] public ChangeUICanvas changeUICanvas;
     [HideInInspector] public MainCanvas mainCanvas;
+    [HideInInspector] public PauseCanvas pauseCanvas;
 
     #region Add
     public void TransitionUI<TOpen, TClose>(float delay, System.Action action = null)
